@@ -120,7 +120,8 @@ const cookiesArr = [
   },
   
 ];
-
+console.log(`==================脚本执行- 北京时间(UTC+8)：${new Date(new Date().getTime() + new Date().getTimezoneOffset()*60*1000 + 8*60*60*1000).toLocaleString()}=====================\n`)
+  // console.log(`\n==================脚本执行来自 github action=====================\n`)
 var tz = "";
 let num = 0;
 all();
