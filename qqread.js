@@ -24,30 +24,30 @@ let qqreadheaderVal, qqreadtimeurlVal, qqreadtimeheaderVal;
 const cookiesArr = [
   {
     qqreadheaderVal: JSON.stringify({
-      ywsession: "i2kkwq03l77bcthn8iy5da334oucvh0r",
+      ywsession: "7q4lke7disjyvz12niuh74mmimsjibsz",
       Cookie:
-        "ywguid=774681422;ywkey=yws11lfDSGlb;platform=ios;channel=mqqmina;mpVersion=0.29.4",
+        "ywguid=568975520;ywkey=ywdmGlIW2iiw;platform=ios;channel=mqqmina;mpVersion=0.29.4",
       Connection: "keep-alive",
       "Content-Type": "application/json",
       Accept: "*/*",
       Host: "mqqapi.reader.qq.com",
-      "User-Agent": "QQ/8.4.17.638 CFNetwork/1206 Darwin/20.1.0",
+      "User-Agent": "QQ/8.4.17.638 CFNetwork/1121.2.2 Darwin/19.2.0",
       Referer: "https://appservice.qq.com/1110657249/0.29.4/page-frame.html",
       "Accept-Language": "zh-cn",
       "Accept-Encoding": "gzip, deflate, br",
       mpversion: "0.29.4",
     }),
     qqreadtimeurlVal:
-      "https://mqqapi.reader.qq.com/mqq/addReadTimeWithBid?scene=1132&refer=-1&bid=34095&readTime=5262&read_type=0&conttype=1&read_status=0&chapter_info=%5B%7B%221%22%3A%7B%22readTime%22%3A5262%2C%22pay_status%22%3A0%7D%7D%5D&sp=-1",
+      "https://mqqapi.reader.qq.com/mqq/addReadTimeWithBid?scene=1007&refer=-1&bid=20468795&readTime=8269&read_type=0&conttype=1&read_status=0&chapter_info=%5B%7B%221%22%3A%7B%22readTime%22%3A8269%2C%22pay_status%22%3A0%7D%7D%5D&sp=%7B%22alg%22%3A%2290.1.1%22%2C%22expid%22%3A42%2C%22exposetime%22%3A%221606371227%22%2C%22logid%22%3A%221856254498772898138%22%2C%22origin%22%3A%220%22%2C%22preitemid%22%3A%22b_20468795%22%2C%22scene%22%3A%22tencent_selected_male%22%2C%22tabtype%22%3A%221%22%2C%22type%22%3A%220%22%2C%22userdegree%22%3A%220%22%7D",
     qqreadtimeheaderVal: JSON.stringify({
-      ywsession: "i2kkwq03l77bcthn8iy5da334oucvh0r",
+      ywsession: "7q4lke7disjyvz12niuh74mmimsjibsz",
       Cookie:
-        "ywguid=774681422;ywkey=yws11lfDSGlb;platform=ios;channel=mqqmina;mpVersion=0.29.4;qq_ver=8.4.17;os_ver=iOS 14.2;mpos_ver=1.21.0;platform=ios;openid=EC547948C374643178BFDA763795D08C",
+        "ywguid=568975520;ywkey=ywdmGlIW2iiw;platform=ios;channel=mqqmina;mpVersion=0.29.4;qq_ver=8.4.17;os_ver=iOS 13.3;mpos_ver=1.21.0;platform=ios;openid=987CB5B225526B688ABD00912BC80E4D",
       Connection: "keep-alive",
       "Content-Type": "application/json",
       Accept: "*/*",
       Host: "mqqapi.reader.qq.com",
-      "User-Agent": "QQ/8.4.17.638 CFNetwork/1206 Darwin/20.1.0",
+      "User-Agent": "QQ/8.4.17.638 CFNetwork/1121.2.2 Darwin/19.2.0",
       Referer: "https://appservice.qq.com/1110657249/0.29.4/page-frame.html",
       "Accept-Language": "zh-cn",
       "Accept-Encoding": "gzip, deflate, br",
