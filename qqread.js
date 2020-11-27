@@ -619,7 +619,7 @@ function qqreadpick() {
 }
 
 function showmsg() {
-  tz += `\n脚本执行：${new Date().toLocaleString()}\n\n`;
+  tz += `\n当前执行时间：${new Date().toLocaleString()}\n\n`;
   if (notifyInterval == 1) $.msg(jsname, "", tz);
   //显示所有通知
   else if (notifyInterval == 2 && box.data.amount >= 0) $.msg(jsname, "", tz);
