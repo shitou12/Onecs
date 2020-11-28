@@ -40,6 +40,5 @@ jobs:
       - name: '运行 【企鹅阅读】'
         run: |
           node qqread.js
-        env:
-          PUSH_KEY: ${{ secrets.PUSH_KEY }}
+
         
