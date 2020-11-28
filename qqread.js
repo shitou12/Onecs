@@ -6,7 +6,6 @@
 
 const jsname = "企鹅读书";
 const $ = Env(jsname);
-const notify= require("./sendnotif"); 
 
 const logs = 0; //0为关闭日志，1为开启
 const notifyInterval = 1;
@@ -632,8 +631,7 @@ function showmsg() {
     box.data.count == 54 ||
     box.data.count == 72
   )
-    $.msg(jsname, "", tz); //宝箱每18次通知一次
-    notify.sendnotif(jsname, "", tz); 
+    $.msg(jsname, "", tz); //宝箱每18次通知
     tz="";
 }
 
