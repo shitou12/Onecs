@@ -6,7 +6,7 @@ name: qqread
 on:
   workflow_dispatch:
   schedule:
-    - cron: ' 11,22,33,44,55 0-24 * * * '
+    - cron: ' 11,22,33,44,55 * * * '
   watch:
     types: started
   repository_dispatch:
