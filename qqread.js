@@ -7,6 +7,7 @@
 const jsname = "企鹅读书";
 const $ = Env(jsname);
 const notify = require("./sendNotify");
+const isSend = true; //true 发送通知 默认不发送
 
 const logs = 0; //0为关闭日志，1为开启
 const notifyInterval = 1;
