@@ -18,4 +18,4 @@
 
 [@adwktt](https://github.com/adwktt/adwktt) - 步步宝、一刻
 
-[@sngxpro](https://github.com/sngxpro) - 节点提供
+[@sngxpro](https://github.com/sngxpro/proxies) - 节点提供
