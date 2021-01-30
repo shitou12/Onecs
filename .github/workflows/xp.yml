@@ -1,12 +1,12 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 小布
+name: 笑谱
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 1 * * *'
+    - cron: '0 0 * * *'
   watch:
     types: started
   repository_dispatch:
@@ -20,13 +20,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
        # with:
-          #repository: shitou12/wsc11
+         # repository: ZhiYi-N/script
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
       - name: Cache node_modules
-        uses: actions/cache@v2 # 使用 GitHub 官方的缓存 Action。
+        uses: actions/cache@v2 # 使用 GitHub 官方缓存 Action。
         env:
           cache-name: cache-node-modules
         with:
@@ -35,18 +35,18 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【XP】'
+      - name: '运行 【笑谱】'
         run: |
           node xp.js
         env:
-          JD_COOKIE: ${{ secrets.JD_COOKIE }}
-          JD_DEBUG: ${{ secrets.JD_DEBUG }}
+          VIDEOHEADER: ${{ secrets.VIDEOHEADER }}
+          VIDEOBODY: ${{ secrets.VIDEOBODY }}
+          GOLDBODY: ${{ secrets.GOLDBODY}}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
-          BARK_SOUND: ${{ secrets.BARK_SOUND }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_USER_ID: ${{ secrets.TG_USER_ID }}
+          BARK_SOUND: ${{ secrets.BARK_SOUND }}
           DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
           DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
           IGOT_PUSH_KEY: ${{ secrets.IGOT_PUSH_KEY }}
-          JD_818_SHAREID_NOTIFY: ${{ secrets.JD_818_SHAREID_NOTIFY }}
