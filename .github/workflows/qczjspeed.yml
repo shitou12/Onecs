@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 汽车之家极速版
+name: 小布
 
 on:
   workflow_dispatch:
@@ -10,7 +10,7 @@ on:
   watch:
     types: started
   repository_dispatch:
-    types: qczjspeed
+    types: xp
 jobs:
   build:
 
@@ -37,20 +37,8 @@ jobs:
           npm install
       - name: '运行 【汽车之家极速版】'
         run: |
-          node Task/qczjspeed.js
+          node xp.js
     env:
         QCZJ_GetUserInfoURL: ${{ secrets.QCZJ_GetUserInfoURL }}
         QCZJ_GetUserInfoHEADER: ${{ secrets.QCZJ_GetUserInfoHEADER }}
-        QCZJ_coinBODY: ${{ secrets.QCZJ_coinBODY }}
-        QCZJ_taskBODY: ${{ secrets.QCZJ_taskBODY }}		
-        QCZJ_activityBODY: ${{ secrets.QCZJ_activityBODY }}	
-        QCZJ_GoldcoinBODY: ${{ secrets.QCZJ_GoldcoinBODY }}	
-        QCZJ_videoBODY: ${{ secrets.QCZJ_videoBODY }}	        
-        QCZJ_WelfarevideoBODY: ${{ secrets.QCZJ_WelfarevideoBODY }}	
-        QCZJ_WelfareBODY: ${{ secrets.QCZJ_WelfareBODY }}	
-        QCZJ_addCoinBODY: ${{ secrets.QCZJ_addCoinBODY }}
-        QCZJ_addCoin2BODY: ${{ secrets.QCZJ_addCoin2BODY }}
-        QCZJ_reportAssHEADER: ${{ secrets.QCZJ_reportAssHEADER }}
-        QCZJ_reportAssBODY: ${{ secrets.QCZJ_reportAssBODY }}
-        QCZJ_cointowalletBODY: ${{ secrets.QCZJ_cointowalletBODY }}
-        QCZJ_CASH: ${{ secrets.QCZJ_CASH }}
+
