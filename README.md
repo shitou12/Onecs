@@ -21,3 +21,5 @@
 [@adwktt](https://github.com/adwktt/adwktt) - 步步宝、一刻
 
 [@sngxpro](https://github.com/sngxpro/proxies) - 节点提供
+
+[@freefq](https://github.com/freefq) - 节点提供
