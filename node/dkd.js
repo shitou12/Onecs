@@ -79,11 +79,11 @@ if ($.isNode()) {
 function dkdck() {
    if ($request.url.indexOf("index") > -1) {
     $.setdata(JSON.stringify($request.url),'dkdurl')
-    $.log(dkdurl)
+    $.log( `$.name url✅: 成功,dkdurl: ${dkdurl}`)
     $.setdata(JSON.stringify($request.headers),'dkdhd')
-$.log(dkdhd)
+$.log(`$.name headers✅: 成功,dkdhd: ${dkdhd}`)
     $.setdata($request.body,'dkdbody')
-$.log(dkdbody)
+$.log(`$.name body✅: 成功,dkdbody: ${dkdbody}`)
    $.msg($.name,"","多看点headers获取成功！")
    $.msg($.name,"","多看点body获取成功！")
     }
@@ -92,11 +92,11 @@ $.log(dkdbody)
 function dkdtxck() {
    if ($request.url.indexOf("withdraw_do?") > -1) {
     $.setdata(JSON.stringify($request.url),'dkdtxurl')
-    $.log(dkdtxurl)
+    $.log(`$.name url✅: 成功,dkdtxurl: ${dkdtxurl}`)
     $.setdata(JSON.stringify($request.headers),'dkdtxhd')
-$.log(dkdtxhd)
+$.log(`$.name headers✅: 成功,dkdtxhd: ${dkdtxhd}`)
     $.setdata($request.body,'dkdtxbody')
-$.log(dkdtxbody)
+$.log(`$.name body✅: 成功,dkdtxbody: ${dkdtxbody}`)
    $.msg($.name,"","多看点提现数据获取成功！")
    
     }
