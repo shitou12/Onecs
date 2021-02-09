@@ -47,7 +47,7 @@ $.log(`获取body✅: 成功,ymzbody: ${ymzbody}`)
   }
 if ($request.url.indexOf("addaction") > -1&&$request.body.indexOf("taskid=2") > -1){
   $.setdata($request.body,'ymzbody1')
-$.log`获取body✅: 成功,ymzbody1: ${ymzbody1}`)
+$.log(`获取body✅: 成功,ymzbody1: ${ymzbody1}`)
    $.msg($.name,"","羊毛赚视频数据获取成功！")
     }
 
