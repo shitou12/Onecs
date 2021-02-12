@@ -27,7 +27,7 @@ jobs:
           npm install
       - name: '运行 【BBB】'
         run: |
-          node Node/BBB.js
+          node node/BBB.js
       - name: '运行 【BBB2】'
         run: |
           node Node/BBB-momo.js
