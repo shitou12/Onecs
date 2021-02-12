@@ -28,8 +28,6 @@ jobs:
       - name: '运行 【BBB】'
         run: |
           node node/BBB.js
-        run: |
-          npm install
       - name: '运行 【BBB1】'
         run: |
           node node/BBBA.js
