@@ -30,7 +30,7 @@ hostname = bububao.duoshoutuan.com,
 
 const $ = new Env('步步寶')
 let notice = ''
-let CookieVal = '{"store":"appstore","tokenstr":"D0F220C028E184A9DE93B3E57525199G1611003270","Connection":"keep-alive","Accept-Encoding":"gzip, deflate, br","version":"10","idfa":"909CCB6C-9360-427C-BB37-FD96BB766D1A","User-Agent":"BBB/132 CFNetwork/1121.2.2 Darwin/19.2.0","platform":"2","imei":"CED1C1F3-4992-4D3E-85B4-DED36A0C3AA5","Cookie":"PHPSESSID=8366qs4n708f1jkk9dvs6sku10","Host":"bububao.duoshoutuan.com","Accept-Language":"zh-cn","Accept":"*/*","Content-Length":"0"}'
+let CookieVal = '{"store":"appstore","tokenstr":"4A081F054FA6BC4588844D530525906G1611049035","Connection":"keep-alive","Accept-Encoding":"gzip, deflate, br","version":"10","idfa":"4C714155-53A2-4588-9748-C56F69467F3D","User-Agent":"BBB/132 CFNetwork/1209 Darwin/20.2.0","platform":"2","imei":"A7AFD013-A985-4FFD-A182-E503526B4177","Cookie":"PHPSESSID=neb81eflgc50b4kgd8g9878r74","Host":"bububao.duoshoutuan.com","Accept-Language":"zh-cn","Accept":"*/*","Content-Length":"0"}'
 
 if ($.isNode()) {
       console.log(`============ 脚本执行-国际标准时间(UTC)：${new Date().toLocaleString()}  =============\n`)
