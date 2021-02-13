@@ -18,6 +18,7 @@ hostname = api.sxsjyzm.com
 
 */
 const $ = new Env('芝麻视频晶石收取');
+const openurl = { "open-url" : "sxsjyzm://" }
 let zmurl = $.getdata('zmurl')
 let zmhd = $.getdata('zmhd')
 let zmbody = $.getdata('zmbody')
@@ -68,7 +69,7 @@ function zmum(timeout = 0) {
   return new Promise((resolve) => {
 let url = {
         url : 'https://api.sxsjyzm.com/api2/Shortvideo/endDoTask',
-        headers : JSON.parse($.getdata('zmhd')),
+        headers : JSON.parse(zmhd),
         body : zmbody,}
       $.post(url, async (err, resp, data) => {
         try {
@@ -94,7 +95,7 @@ function zmlq(timeout = 0) {
   return new Promise((resolve) => {
 let url = {
         url : 'https://api.sxsjyzm.com/api2/loot/quickgetloot',
-        headers : JSON.parse($.getdata('zmhd')),
+        headers : JSON.parse(zmhd),
         body : zmbody,}
       $.post(url, async (err, resp, data) => {
         try {
@@ -128,7 +129,7 @@ function zmsx(timeout = 0) {
       }
 let url = {
         url : 'https://api.sxsjyzm.com/api2/loot/index',
-        headers : JSON.parse($.getdata('zmhd')),
+        headers : JSON.parse(zmhd),
         body : zmbody,}
       $.post(url, async (err, resp, data) => {
         try {
