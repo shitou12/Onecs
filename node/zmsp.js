@@ -27,7 +27,7 @@ if ($.isNode()) {
       zmhd = process.env.ZMHD;
       zmbody = process.env.ZMBODY;
       
-      console.log(============ 脚本执行-北京时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}  =============\n)
+      console.log(`============ 脚本执行-北京时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}  =============\n`)
 }
 !(async () => {
   if (typeof $request !== "undefined") {
