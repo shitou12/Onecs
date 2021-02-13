@@ -1,13 +1,18 @@
 /*
 软件名称:芝嫲视频 商店搜索下载
+2.13更新说明
+加入激励视频奖励领取um，um可以拿去um交易所出售
+一个um1.2元，出售需要一个um的手续费，所以需要两个um一起才能出售一个
+um交易所下载地址:https://raw.githubusercontent.com/age174/-/main/4036E992-6AF7-4223-B5D9-CF9808C07E15.jpeg  请复制网址浏览器打开扫码下载
 芝嫲视频
 圈X配置如下，其他软件自行测试
-
+[task_local]
 #芝嫲视频
 15 50 3 * * * https://raw.githubusercontent.com/age174/-/main/zmsp.js, tag=芝嫲视频, img-url=https://s3.ax1x.com/2021/02/06/yYzeWn.png, enabled=true
 
 #芝麻视频
 ^https://api.sxsjyzm.com/api2/loot/index url script-request-body https://raw.githubusercontent.com/age174/-/main/zmsp.js
+
 hostname = api.sxsjyzm.com
 
 
@@ -22,15 +27,14 @@ if ($.isNode()) {
       zmhd = process.env.ZMHD;
       zmbody = process.env.ZMBODY;
       
-      console.log(`============ 脚本执行-北京时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}  =============\n`)
+      console.log(============ 脚本执行-北京时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}  =============\n)
 }
-
 !(async () => {
   if (typeof $request !== "undefined") {
     await zmck()
    
   } else {
-    await zmsx()
+    await zmum()
 for (let i = 0; i < 30; i++) {
       $.index = i + 1
       console.log(`\n芝嫲视频开始执行第${i+1}次领取晶石！💦\n等待11秒开始执行下一次领取`)
@@ -38,7 +42,7 @@ for (let i = 0; i < 30; i++) {
 if(zz==1){
 break;
 }
-  }$.msg("","","芝嫲视频本轮晶石已全部领取完毕，等待下次成熟!")
+  }$.msg("","",'芝嫲视频本轮晶石已全部领取完毕，，等待下次成熟!')
   }
 })()
   .catch((e) => $.logErr(e))
@@ -58,6 +62,33 @@ $.log(zmbody)
   }
 
 
+
+//芝嫲视频获取um     
+function zmum(timeout = 0) {
+  return new Promise((resolve) => {
+let url = {
+        url : 'https://api.sxsjyzm.com/api2/Shortvideo/endDoTask',
+        headers : JSON.parse($.getdata('zmhd')),
+        body : zmbody,}
+      $.post(url, async (err, resp, data) => {
+        try {
+           
+    const result = JSON.parse(data)
+        if(result.code == 200){
+        console.log('\n芝嫲激励视频回执:成功🌝 '+result.mess)
+}
+if(result.code == 190){
+
+       console.log('\n芝嫲激励视频回执:失败🚫 '+result.mess)}
+        } catch (e) {
+          //$.logErr(e, resp);
+        } finally {
+          resolve()
+        }
+    },timeout)
+  })
+}
+
 //芝嫲视频领取晶石     
 function zmlq(timeout = 0) {
   return new Promise((resolve) => {
@@ -70,12 +101,12 @@ let url = {
            
     const result = JSON.parse(data)
         if(result.code == 200){
-        console.log('芝嫲视频收取晶石回执:成功🌝 '+result.mess)
+        console.log('\n芝嫲视频收取晶石回执:成功🌝 '+result.mess)
 }
 if(result.code == 1002){
    zz = 1
 
-       console.log('芝嫲视频收取晶石回执:失败🚫 '+result.mess)}
+       console.log('\n芝嫲视频收取晶石回执:失败🚫 '+result.mess)}
         } catch (e) {
           //$.logErr(e, resp);
         } finally {
@@ -104,7 +135,7 @@ let url = {
           
     const result = JSON.parse(data)
         if(result.code == 200){
-        console.log('芝嫲视频刷新回执:成功🌝 '+result.mess)
+        console.log('\n芝嫲视频刷新回执:成功🌝 '+result.mess)
 }
 if(result.code == 2970){
         $.msg('','','芝嫲视频回执:失败🚫 '+result.mess+'请重新获取body')
