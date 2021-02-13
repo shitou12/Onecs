@@ -31,6 +31,9 @@ jobs:
       - name: '运行 【BBB1】'
         run: |
           node node/BBBA.js
+      - name: '运行 【BBB2】'
+        run: |
+          node node/BBB-yy.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
