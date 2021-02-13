@@ -123,7 +123,7 @@ if(result.code == 1002){
 function zmsx(timeout = 0) {
   return new Promise((resolve) => {
     setTimeout( ()=>{
-      if (typeof $.getdata('zmurl') === "undefined") {
+      if (typeof zmurl === "undefined") {
         $.msg($.name,"",'请先获取芝嫲视频body!😓',)
         $.done()
       }
