@@ -2,28 +2,12 @@
 tgchannel：https://t.me/ZhiYi_Script
 github：https://github.com/ZhiYi-N/script
 boxjs：https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/ZhiYi-N.boxjs.json
-转载留个名字，谢谢
-邀请码：AU6GW
-谢谢
-作者：执意ZhiYi-N
-#看一个视频弹出金币获取ck
-[mitm]
+
 hostname = api3-normal-c-*.huoshan.com
 #圈x
-[rewrite local]
 https://api3-normal-c-\w+.huoshan.com/hotsoon/flame/task_done/? url script-request-body https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/huoshan.js
-
 https://api3-normal-c-\w+.huoshan.com/hotsoon/item/reaction/_play/? url script-request-body https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/huoshan.js
 
-#loon
-http-request https://api3-normal-c-\w+.huoshan.com/hotsoon/flame/task_done/? script-path=https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/huoshan.js, requires-body=true, timeout=10, tag=抖音火山版video
-
-http-request https://api3-normal-c-\w+.huoshan.com/hotsoon/item/reaction/_play/? script-path=https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/huoshan.js, requires-body=true, timeout=10, tag=抖音火山版play
-
-#surge
-抖音火山版video = type=http-request,pattern=^https://api3-normal-c-\w+.huoshan.com/hotsoon/flame/task_done/?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/huoshan.js,script-update-interval=0
-
-抖音火山版play = type=http-request,pattern=^https://api3-normal-c-\w+.huoshan.com/hotsoon/item/reaction/_play/?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/huoshan.js,script-update-interval=0
 */
 const zhiyi = '抖音火山版'
 const $ = Env(zhiyi)
@@ -60,66 +44,13 @@ if (isGetCookie) {
    $.done()
 } 
 if ($.isNode()) {
-   if (process.env.HSURL && process.env.HSURL.indexOf('#') > -1) {
+ 
    hsurl = process.env.HSURL.split('#');
-   console.log(`您选择的是用"#"隔开\n`)
-  }
-  else if (process.env.HSURL && process.env.HSURL.indexOf('\n') > -1) {
-   hsurl = process.env.HSURL.split('\n');
-   console.log(`您选择的是用换行隔开\n`)
-  } else {
-   hsurl = process.env.HSURL.split()
-  };
-  if (process.env.HSHEADER && process.env.HSHEADER.indexOf('#') > -1) {
    hsheader = process.env.HSHEADER.split('#');
-   console.log(`您选择的是用"#"隔开\n`)
-  }
-  else if (process.env.HSHEADER && process.env.HSHEADER.indexOf('\n') > -1) {
-   hsheader = process.env.HSHEADER.split('\n');
-   console.log(`您选择的是用换行隔开\n`)
-  } else {
-   hsheader = process.env.HSHEADER.split()
-  };
-  if (process.env.HSBODY && process.env.HSBODY.indexOf('#') > -1) {
    hsbody = process.env.HSBODY.split('#');
-   console.log(`您选择的是用"#"隔开\n`)
-  }
-  else if (process.env.HSBODY && process.env.HSBODY.indexOf('\n') > -1) {
-   hsbody = process.env.HSBODY.split('\n');
-   console.log(`您选择的是用换行隔开\n`)
-  } else {
-   hsbody = process.env.HSBODY.split()
-  };
-if (process.env.PLAYURL && process.env.PLAYURL.indexOf('#') > -1) {
    playurl = process.env.PLAYURL.split('#');
-   console.log(`您选择的是用"#"隔开\n`)
-  }
-  else if (process.env.PLAYURL && process.env.PLAYURL.indexOf('\n') > -1) {
-   playurl = process.env.PLAYURL.split('\n');
-   console.log(`您选择的是用换行隔开\n`)
-  } else {
-   playurl = process.env.PLAYURL.split()
-  };
-  if (process.env.PLAYHEADER && process.env.PLAYHEADER.indexOf('#') > -1) {
    playheader = process.env.PLAYHEADER.split('#');
-   console.log(`您选择的是用"#"隔开\n`)
-  }
-  else if (process.env.PLAYHEADER && process.env.PLAYHEADER.indexOf('\n') > -1) {
-   playheader = process.env.PLAYHEADER.split('\n');
-   console.log(`您选择的是用换行隔开\n`)
-  } else {
-   playheader = process.env.PLAYHEADER.split()
-  };
-  if (process.env.PLAYBODY && process.env.PLAYBODY.indexOf('#') > -1) {
    playbody = process.env.PLAYBODY.split('#');
-   console.log(`您选择的是用"#"隔开\n`)
-  }
-  else if (process.env.PLAYBODY && process.env.PLAYBODY.indexOf('\n') > -1) {
-   playbody = process.env.PLAYBODY.split('\n');
-   console.log(`您选择的是用换行隔开\n`)
-  } else {
-   playbody = process.env.PLAYBODY.split()
-  };
     console.log(`============ 脚本执行-国际标准时间(UTC)：${new Date().toLocaleString()}  =============\n`)
     console.log(`============ 脚本执行-北京时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}  =============\n`)
  } else {
