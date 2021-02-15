@@ -20,7 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: ZhiYi-N/script
+          repository: shitou12/Onecs
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -37,7 +37,7 @@ jobs:
           npm install
       - name: '运行 【抖音火山版】'
         run: |
-          node huoshan.js
+          node node/huoshan.js
         env:
           HOTSOONSIGNHEADER: ${{ secrets. HSURL }}
           HOTSOONSIGNKEY: ${{ secrets. HSHEADER }}
