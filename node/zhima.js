@@ -74,10 +74,6 @@ const zhimabodyArr = [];
 let zhimabodyVal = ``;
 let middlezhimabody = [];
 
-
-
-
-
 if ($.isNode() && process.env.ZM_zhimabody) {
     COOKIES_SPLIT = process.env.COOKIES_SPLIT || "\n";
     console.log(
@@ -95,16 +91,13 @@ if ($.isNode() && process.env.ZM_zhimabody) {
     }
     
 }
-if (COOKIE.zhimabodyArr) {
+if (COOKIE.zhimabodyVal) {
     ZM_COOKIES = {
-        "zhimabodyVal": COOKIE.zhimabodyVal.split('\n'),
-    
-
-
+        "zhimabodyVal": COOKIE.zhimabodyVal.split('\n')   
     }
-    Length = ZM_COOKIES.zhimabodyArr.length;
+    Length = ZM_COOKIES.zhimabodyVal.length;
 }
-if (!COOKIE.zhimabodyArr) {
+if (!COOKIE.zhimabodyVal) {
     if ($.isNode()) {
         Object.keys(middlezhimabody).forEach((item) => {
             if (middlezhimabody[item]) {
@@ -122,8 +115,6 @@ if (!COOKIE.zhimabodyArr) {
             if ($.getdata(`zhimabody${i}`)) {
                 zhimabodyArr.push($.getdata(`zhimabody${i}`));
                 
-
-
             }
         }
     }
@@ -136,9 +127,6 @@ if (zhimabodyArr == '') {
     
 }
 
-
-
-
 function GetCookie() {
     if ($request && $request.url.indexOf("loot") >= 0 && $request.url.indexOf("index") >= 0) {
         const zhimabodyVal = $request.body;
@@ -147,9 +135,6 @@ function GetCookie() {
             `[${$.name + $.idx}] 获取zhimabodyVal✅: 成功,zhimabodyVal: ${zhimabodyVal}`
         );
         $.msg($.name + $.idx, `获取zhimabodyVal: 成功🎉`, ``);
-
-
-
 
     }
 
