@@ -4,7 +4,7 @@
 
 [@LXK9301]( https://github.com/LXK9301/jd_scripts)  - 京东  
 
-[@ziye12](https://github.com/ziye12/JavaScript) - 企鹅读书                                
+[@ziye12](https://github.com/ziye66666/JavaScript) - 企鹅读书                                
 
 [@Zero-S1](https://github.com/Zero-S1/xmly_speed) - 喜马拉雅极速版签到
 
