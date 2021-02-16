@@ -7,7 +7,7 @@
   watch:
     types: started
   repository_dispatch:
-    types: 818
+    types: baidu_speed
 jobs:
   build:
 
