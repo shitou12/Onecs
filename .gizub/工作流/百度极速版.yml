@@ -38,7 +38,7 @@ jobs:
       - name: '运行 【百度极速版】'
         run: |
           node baidu_speed.js
-         env:
+        env:
            BAIDU_COOKIE: ${{ secrets.BAIDU_COOKIE }}
            BAIDU_CASH: ${{ secrets.BAIDU_CASH }}
            TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
