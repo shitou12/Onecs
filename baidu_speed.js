@@ -172,7 +172,7 @@ function userInfo() {
           enabledmoney = get_pay.data.enabled_money,
           yesterdaycoin = get_pay.data.yesterday_coin;
        if(CookieArr.length==1){
-          username = $.getdata('baidu_nick') ? $.getdata('baidu_nick') : 石头;
+          username = $.getdata('baidu_nick') ? $.getdata('baidu_nick') : 才和群;
          } else {
           username = "账号"+ $.index
          }
