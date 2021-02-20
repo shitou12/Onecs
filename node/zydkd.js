@@ -1,8 +1,8 @@
 /* ziye 
-github地址 https://github.com/ziye12
+github地址 https://github.com/ziye66666
 TG频道地址  https://t.me/ziyescript
 TG交流群   https://t.me/joinchat/AAAAAE7XHm-q1-7Np-tF3g
-boxjs链接  https://raw.githubusercontent.com/ziye12/JavaScript/main/Task/ziye.boxjs.json
+boxjs链接  https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/ziye.boxjs.json
 
 转载请备注个名字，谢谢
 ⚠️多看点APP
@@ -14,6 +14,9 @@ boxjs链接  https://raw.githubusercontent.com/ziye12/JavaScript/main/Task/ziye.
 2.11 完善判定
 2.11-2  修复视频和广告以及提现判定问题
 2.12 增加碎片显示以及兑换
+2.14 修复宝箱问题
+2.16 修复报错
+2.19 修复碎片兑换问题
 
 ⚠️一共1个位置 1个ck  👉 2条 Secrets
 多账号换行
@@ -36,13 +39,13 @@ hostname=dkd-api.dysdk.com,
 
 ############## 圈x
 #多看点APP获取body
-http:\/\/dkd-api\.dysdk\.com\/* url script-request-body https://raw.githubusercontent.com/ziye12/JavaScript/main/Task/duokandian.js   
+http:\/\/dkd-api\.dysdk\.com\/* url script-request-body https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/duokandian.js   
 
 ############## loon
-http-request http:\/\/dkd-api\.dysdk\.com\/* script-path=https://raw.githubusercontent.com/ziye12/JavaScript/main/Task/duokandian.js,requires-body=1,max-size=0, tag=多看点APP获取body
+http-request http:\/\/dkd-api\.dysdk\.com\/* script-path=https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/duokandian.js,requires-body=1,max-size=0, tag=多看点APP获取body
 
 ############## surge
-多看点APP获取body = type=http-request,pattern=http:\/\/dkd-api\.dysdk\.com\/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ziye12/JavaScript/main/Task/duokandian.js 
+多看点APP获取body = type=http-request,pattern=http:\/\/dkd-api\.dysdk\.com\/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/duokandian.js 
 */
 
 
@@ -72,11 +75,26 @@ duokandianheaderVal = {
     'User-Agent': `duokandian/3.0.2 (com.duoyou.duokandian1; build:0; iOS 14.2.0) Alamofire/5.4.0`,
     'Accept-Language': `zh-Hans-CN;q=1.0`
 };
+
+duokandianspdhheaderVal = {
+    "Accept": "application/json, text/plain, */*",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept-Language": "zh-cn",
+    "Connection": "close",
+    "Content-Length": "8",
+    "Content-Type": "application/json;charset=utf-8",
+    "Host": "dkd-api.dysdk.com",
+    "Origin": "http://dkd-api.dysdk.com",
+    "Referer": "http://dkd-api.dysdk.com/index.html",
+    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+};
+
+
 if ($.isNode()) {
     // 没有设置 DKD_duokandianCASH 则默认为 0 不提现
-    CASH = process.env.DKD_duokandianCASH || 50;
+    CASH = process.env.DKD_duokandianCASH || 0;
 }
-if ($.isNode() && process.env.DKD_duokandianHEADER) {
+if ($.isNode() && process.env.DKD_duokandianBODY) {
     COOKIES_SPLIT = process.env.COOKIES_SPLIT || "\n";
     console.log(
         `============ cookies分隔符为：${JSON.stringify(
@@ -222,7 +240,9 @@ function daytime(inputTime) {
 };
 //时间戳格式化日期
 function time(inputTime) {
-    var date = new Date(inputTime);
+    if ($.isNode()) {
+        var date = new Date(inputTime + 8 * 60 * 60 * 1000);
+    } else var date = new Date(inputTime);
     Y = date.getFullYear() + '-';
     M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
     D = date.getDate() + ' ';
@@ -304,6 +324,7 @@ async function all() {
                 await timeaward(); //时段奖励
                 await timeawardsss(); //时段翻倍
             }
+            await extrabox(); //宝箱刷新
             await boxaward(); //宝箱奖励
             await boxbox(); //宝箱翻倍
         }
@@ -422,8 +443,8 @@ function days(timeout = 0) {
                     if (logs) $.log(`${O}, 任务列表🚩: ${data}`);
                     $.days = JSON.parse(data);
                     if ($.days) {
-                        sp = $.days.data.list.find(item => item.id === 1 || item.id === 11);
-                        gg = $.days.data.list.find(item => item.id === 2 || item.id === 12);
+                        sp = $.days.data.list.find(item => item.pathurl === "duokandian://video");
+                        gg = $.days.data.list.find(item => item.pathurl === "duokandian://xxx");
                         yi = $.days.data.Task_comp.data.find(item => item.pro === 20);
                         er = $.days.data.Task_comp.data.find(item => item.pro === 50);
 
@@ -616,12 +637,12 @@ function lotto(timeout = 0) {
 function chip(timeout = 0) {
     return new Promise((resolve) => {
         setTimeout(() => {
+
             let url = {
                 url: `http://dkd-api.dysdk.com/lotto/convert?${duokandianbodyVal}`,
-                headers: duokandianheaderVal,
-                body: {
-                    "id": 4
-                },
+                headers: duokandianspdhheaderVal,
+                body: `{"id":4}`,
+
             }
             $.post(url, async (err, resp, data) => {
                 try {
@@ -766,6 +787,41 @@ function timeawardsss(timeout = 0) {
         }, timeout)
     })
 }
+
+//宝箱刷新
+function extrabox(timeout = 0) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            let url = {
+                url: `http://dkd-api.dysdk.com/red/box_init`,
+                headers: duokandianheaderVal,
+                body: duokandianbodyVal,
+            }
+            $.post(url, async (err, resp, data) => {
+                try {
+                    if (logs) $.log(`${O}, 时段刷新🚩: ${data}`);
+                    $.extrabox = JSON.parse(data);
+                    if ($.extrabox.status_code == 200) {
+                        console.log(`【宝箱刷新】：刷新成功,剩余${$.extrabox.data.diff}秒\n`);
+                        $.message += `【宝箱刷新】：刷新成功,剩余${$.extrabox.data.diff}秒\n`;
+                    }
+                    if ($.extrabox.status_code == 10020) {
+                        console.log(`【宝箱刷新】：${$.extrabox.message}\n`);
+                        $.message += `【宝箱刷新】：${$.extrabox.message}\n`;
+                    }
+                } catch (e) {
+                    $.logErr(e, resp);
+                } finally {
+                    resolve()
+                }
+            })
+        }, timeout)
+    })
+}
+
+
+
+
 //宝箱奖励
 function boxaward(timeout = 0) {
     return new Promise((resolve) => {
@@ -933,6 +989,10 @@ function video(timeout = 0) {
                 if ($.awardpost && $.awardpost.status_code) {
                     console.log(`【红包奖励】：共领取${ABB}次红包奖励,共${ADD}金币\n`);
                     $.message += `【红包奖励】：共领取${ABB}次红包奖励,共${ADD}金币\n`
+                }
+                if ($.videoyz && $.videoyz.data.status == 4) {
+                    console.log(`【红包奖励】：已完成\n`);
+                    $.message += `【红包奖励】：已完成\n`
                 }
             }, videoBODY.length * 30000 - 29000)
         }, timeout)
