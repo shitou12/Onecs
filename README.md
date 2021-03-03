@@ -30,5 +30,6 @@ https://github.com/pxylen/Task
 
 [@tsuyoshi727](https://github.com/tsuyoshi727)
 
+[@姐姐](https://github.com/CenBoMin/GithubSync)
 
 [@蔡大佬](https://github.com/xiaokxiansheng)
