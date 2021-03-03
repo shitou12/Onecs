@@ -308,55 +308,55 @@ async function all() {
         if ($.user.data && $.user.data.today_gold >= 2000 && $.signindex.data.sign_status == 0) {
             await sign(); //签到
         }
-        await days(); //任务列表
-        await lottoindex(); //转盘查询
-        if ($.lottoindex.data && $.lottoindex.data.times >= 1) {
-            await lotto(); //转盘抽奖
-        }
-        if ($.lottoindex.data && $.lottoindex.data.chip >= 4) {
-            await chip(); //碎片兑换
-        }
+         //await days(); //任务列表
+        // await lottoindex(); //转盘查询
+         //if ($.lottoindex.data && $.lottoindex.data.times >= 1) {
+             //await lotto(); //转盘抽奖
+         //}
+         //if ($.lottoindex.data && $.lottoindex.data.chip >= 4) {
+            // await chip(); //碎片兑换
+        // }
 
-        if (gg && gg.status != 2) {
-            await advideo(); //广告视频
-            await extratime(); //时段刷新
-            if ($.extratime.data && $.extratime.data.status == 1) {
-                await timeaward(); //时段奖励
-                await timeawardsss(); //时段翻倍
-            }
-            await extrabox(); //宝箱刷新
-            await boxaward(); //宝箱奖励
-            await boxbox(); //宝箱翻倍
-        }
-        if (gg && gg.status == 2) {
-            console.log(`【时段奖励】：已完成\n`);
-            $.message += `【时段奖励】：已完成\n`
-            console.log(`【宝箱奖励】：已完成\n`);
-            $.message += `【宝箱奖励】：已完成\n`
-        }
+         //if (gg && gg.status != 2) {
+            // await advideo(); //广告视频
+           //  await extratime(); //时段刷新
+            // if ($.extratime.data && $.extratime.data.status == 1) {
+                 //await timeaward(); //时段奖励
+                 //await timeawardsss(); //时段翻倍
+            // }
+             //await extrabox(); //宝箱刷新
+             //await boxaward(); //宝箱奖励
+             //await boxbox(); //宝箱翻倍
+         //}
+        // if (gg && gg.status == 2) {
+             //console.log(`【时段奖励】：已完成\n`);
+             //$.message += `【时段奖励】：已完成\n`
+             //console.log(`【宝箱奖励】：已完成\n`);
+            // $.message += `【宝箱奖励】：已完成\n`
+        // }
 
-        if (sp && sp.status == 1) {
-            await spaward(); //视频达成
-        }
-        if (yi && yi.status == 1) {
-            await rw1(); //日常任务1
-        }
-        if (er && er.status == 1) {
-            await rw2(); //日常任务2
-        }
-        await txcx(); //提现查询
-        if (CASH == 1 && $.user.data && $.user.data.cash >= 1 && txtx >= 5) {
-            await tx(); //提现
-        }
-        if (CASH == 3 && $.user.data && $.user.data.cash >= 3 && txtx >= 10) {
-            await tx(); //提现
-        }
-        if (CASH == 5 && $.user.data && $.user.data.cash >= 5 && txtx >= 15) {
-            await tx(); //提现
-        }
-        if (CASH == 15 && $.user.data && $.user.data.cash >= 15 && txtx >= 30) {
-            await tx(); //提现
-        }
+        // if (sp && sp.status == 1) {
+             //await spaward(); //视频达成
+         //}
+         //if (yi && yi.status == 1) {
+            // await rw1(); //日常任务1
+        // }
+        // if (er && er.status == 1) {
+         //    await rw2(); //日常任务2
+        // }
+        // await txcx(); //提现查询
+        // if (CASH == 1 && $.user.data && $.user.data.cash >= 1 && txtx >= 5) {
+         //    await tx(); //提现
+         //}
+        // if (CASH == 3 && $.user.data && $.user.data.cash >= 3 && txtx >= 10) {
+         //    await tx(); //提现
+         //}
+         //if (CASH == 5 && $.user.data && $.user.data.cash >= 5 && txtx >= 15) {
+         //    await tx(); //提现
+        // }
+         //if (CASH == 15 && $.user.data && $.user.data.cash >= 15 && txtx >= 30) {
+             //await tx(); //提现
+        // }
 
 
 
