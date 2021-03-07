@@ -1,4 +1,4 @@
- name: 多看点
+ name: 书起
 
  on:
    workflow_dispatch:
@@ -22,7 +22,7 @@
          run: |
            cd ~/action-group
            npm install
-       - name: '运行 【多看点】'
+       - name: '运行 【书书】'
          run: |
            cd ~/action-group
            node Node/sqxs.js
