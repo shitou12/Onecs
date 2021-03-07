@@ -17,17 +17,17 @@ let BARK_SOUND = '';
 // =======================================telegram机器人通知设置区域===========================================
 //此处填你telegram bot 的Token，例如：1077xxx4424:AAFjv0FcqxxxxxxgEMGfi22B4yh15R5uw
 //注：此处设置github action用户填写到Settings-Secrets里面(Name输入TG_BOT_TOKEN)
-let TG_BOT_TOKEN = '1532829572:AAHNwbSfC8dDV7EG9Mwrw26jHqSXxWmw_hM';
+let TG_BOT_TOKEN = '';
 //此处填你接收通知消息的telegram用户的id，例如：129xxx206
 //注：此处设置github action用户填写到Settings-Secrets里面(Name输入TG_USER_ID)
-let TG_USER_ID = '999860172';
+let TG_USER_ID = '';
 
 // =======================================钉钉机器人通知设置区域===========================================
 //此处填你钉钉 bot 的webhook，例如：5a544165465465645d0f31dca676e7bd07415asdasd
 //注：此处设置github action用户填写到Settings-Secrets里面(Name输入DD_BOT_TOKEN)
-let DD_BOT_TOKEN = '';
+let DD_BOT_TOKEN = 'fdbcd25ecb78c53e92497daca45defb98c2b25eb1c163d3d877ff938d83261eb';
 //密钥，机器人安全设置页面，加签一栏下面显示的SEC开头的字符串
-let DD_BOT_SECRET = '';
+let DD_BOT_SECRET = 'SEC3ea3fe47fac56e68974e01504233327fb7c167abb4674c9328820b52eb65465b';
 
 // =======================================iGot聚合推送通知设置区域===========================================
 //此处填您iGot的信息(推送key，例如：https://push.hellyw.com/XXXXXXXX)
