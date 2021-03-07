@@ -14,9 +14,6 @@
      runs-on: ubuntu-latest
      if: github.event.repository.owner.id == github.event.sender.id
      steps:
-       - name: Checkout
-         run: |
-           git clone https://github.com/tsuyoshi727/action-group.git ~/action-group
        - name: Use Node.js 12.x
          uses: actions/setup-node@v1
          with:
@@ -28,13 +25,4 @@
        - name: '运行 【多看点】'
          run: |
            cd ~/action-group
-           node Node/dkd.js
-         env:
-           DKDURL: ${{ secrets.DKDURL }}
-           DKDHD: ${{ secrets.DKDHD }}
-           DKDBODY: ${{ secrets.DKDBODY }}
-           DKDTXURL: ${{ secrets.DKDTXURL }}
-           DKDTXHD: ${{ secrets.DKDTXHD }}
-           DKDTXBODY: ${{ secrets.DKDTXBODY }}
-           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-           TG_USER_ID: ${{ secrets.TG_USER_ID }}
+           node Node/sqxs.js
