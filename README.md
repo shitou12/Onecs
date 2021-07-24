@@ -33,3 +33,5 @@ https://github.com/pxylen/Task
 [@姐姐](https://github.com/CenBoMin/GithubSync)
 
 [@蔡大佬](https://github.com/caixukun112)
+
+[@青蛙大佬]https://github.com/smiek2221/scripts
