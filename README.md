@@ -2,7 +2,7 @@
 
 薅羊毛：
 
-[@LXK9301]( https://github.com/LXK9301/jd_scripts)  - 京东  
+[@韦哥]( https://github.com/zsl119)  -   
 
 [@ziye12](https://github.com/ziye66666/JavaScript) - 企鹅读书                                
 
