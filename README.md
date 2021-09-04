@@ -16,7 +16,7 @@
 
 [@lxk0301](https://github.com/LXK9301/jd_scripts/tree/master) - 京东系列
 
-[@shylocks](https://github.com/shylocks/loon) - 京东系列2
+[@TOM](https://github.com/xl2101200) - TOM
 
 [@adwktt](https://github.com/adwktt/adwktt) - 步步宝、一刻
 
