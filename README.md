@@ -4,7 +4,7 @@
 
 [@韦哥]( https://github.com/zsl119)  -   
 
-[@ziye12](https://github.com/ziye66666/JavaScript) - 企鹅读书                                
+[@ziye12](https://github.com/ziye888/JavaScript) -                                 
 
 [@Zero-S1](https://github.com/Zero-S1/xmly_speed) - 喜马拉雅极速版签到
 
