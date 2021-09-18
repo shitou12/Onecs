@@ -32,6 +32,6 @@
 
 [@姐姐](https://github.com/CenBoMin/GithubSync)
 
-[@蔡大佬](https://github.com/caixukun112)
+[@蔡大佬](https://github.com/caixukun1991)
 
 [@青蛙大佬](https://github.com/smiek2221/scripts)
