@@ -27,5 +27,5 @@ jobs:
           npm install md5-node
       - name: '运行 【jsz】'
         run: |
-          cd ~/js   
+          cd ~/Onecs   
           node Task/jsz1.js
