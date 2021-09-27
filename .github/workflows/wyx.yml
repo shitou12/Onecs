@@ -23,4 +23,4 @@ jobs:
         env:
           TASKID: ${{ secrets.TASKID }}
           USERID: ${{ secrets.USERID }}
-        run: php sign.php
+        run: php Task/sign.php
