@@ -1,0 +1,124 @@
+{
+    "jckd_kkz_pro": 1,
+    "jckd_read_pro": 1,
+    "jckd_reward_pro": 1,
+    "jckd_timerBox_pro": 1,
+    "jctq_kkz_pro": 1,
+    "jctq_read_pro": 1,
+    "jctq_reward_pro": 1,
+    "jctq_timerBox_pro": 1,
+    "zqkd_kkz_pro": 1,
+    "zqkd_kkz_pro_jz": 1,
+    "zqkd_read_pro": 1,
+    "zqkd_read_pro_jz": 1,
+    "zqkd_reward_pro": 1,
+    "zqkd_audio_pro": 1,
+    "zqkd_ssz_pro": 1,
+    "zqkd_timerBox_pro": 1,
+    "zqkd_push": 1,
+    "zqkd_check": 1,
+    "cdl": 1,
+    "zqkdFast_reward_pro": 1,
+    "zqkdFast_daily": {
+        "status": 3,
+        "updateMsg": "2022.01.09 11:49 更新版本\n",
+        "version": 1.00,
+        "versionMsg": "当前脚本版本过低，请更新脚本，地址：https://raw.githubusercontents.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_daily.js\n",
+        "msg": [
+            "运行正常\n",
+            "此脚本无法运行，请马上删除\n",
+            "此脚本已作废，请下载新脚本，地址：https://raw.githubusercontents.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_daily.js\n",
+            "中青又更新加密了，此脚本暂时停用\n"
+        ]
+    },
+    "zqkdFast_shareRead": {
+        "status": 0,
+        "updateMsg": "2022.01.09 11:49 更新版本\n",
+        "version": 1.00,
+        "versionMsg": "当前脚本版本过低，请更新脚本，地址：https://raw.githubusercontents.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_shareRead.js\n",
+        "msg": [
+            "运行正常\n",
+            "此脚本无法运行，请马上删除\n",
+            "此脚本已作废，请下载新脚本，地址：https://raw.githubusercontents.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_shareRead.js\n"
+        ]
+    },
+    "zqkdFast_reward": {
+        "status": 0,
+        "updateMsg": "2022.01.09 1:51 更新版本\n",
+        "version": 1.00,
+        "versionMsg": "当前脚本版本过低，请更新脚本，地址：https://raw.githubusercontents.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_reward.js\n",
+        "msg": [
+            "运行正常\n",
+            "此脚本无法运行，请马上删除\n",
+            "此脚本已作废，请下载新脚本，地址：https://raw.githubusercontents.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_reward.js\n"
+        ]
+    },
+    "zqkdFast_read": {
+        "status": 0,
+        "updateMsg": "2022.01.09 1:51 修复文章视频\n",
+        "version": 1.00,
+        "versionMsg": "当前脚本版本过低，请更新脚本，地址：https://raw.githubusercontents.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_read.js\n",
+        "msg": [
+            "运行正常\n",
+            "此脚本无法运行，请马上删除\n",
+            "此脚本已作废，请下载新脚本，地址：https://raw.githubusercontents.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_read.js\n"
+        ]
+    },
+    "zqkdFast_kkz": {
+        "status": 0,
+        "updateMsg": "2022.01.09 2:00 修复看看赚\n",
+        "version": 1.00,
+        "versionMsg": "当前脚本版本过低，请更新脚本，地址：https://raw.githubusercontents.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_kkz.js\n",
+        "msg": [
+            "运行正常\n",
+            "此脚本无法运行，请马上删除\n",
+            "此脚本已作废，请下载新脚本，地址：https://raw.githubusercontents.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_kkz.js\n"
+        ]
+    },
+    "jztt": {
+        "status": 0,
+        "updateMsg": "2022.01.12 15:50 更新重写和提现延迟。jzttToken只需要填token值，不要把整个url放上去！！！另外脚本默认的定时15分太多人一起跑可能会导致出现签名错误，建议自己改定时，一小时一次就行\n",
+        "version": 1.01,
+        "versionMsg": "当前脚本版本过低，请使用直链，不要用ghproxy代理更新脚本，地址：https://raw.githubusercontents.com/leafxcy/JavaScript/main/jztt.js\n",
+        "msg": [
+            "运行正常\n",
+            "此脚本无法运行，请马上删除\n",
+            "此脚本已作废，请下载新脚本，地址：https://raw.githubusercontents.com/leafxcy/JavaScript/main/jztt.js\n"
+        ]
+    },
+    "kfx": {
+        "status": 0,
+        "updateMsg": "2022.01.22 16:10 完成脚本",
+        "version": 1.00,
+        "versionMsg": "当前脚本版本过低，请使用直链，不要用ghproxy代理更新脚本，地址：https://raw.githubusercontents.com/leafxcy/JavaScript/main/kfx.js\n",
+        "msg": [
+            "最好别用脚本默认时间，避免太多人一起签到做任务\n定时每天一次到两次就行了，时间随意，建议只换2块E卡就好，话费从来没有抢到过\n\n",
+            "此脚本无法运行，请马上删除\n",
+            "此脚本已作废，请下载新脚本，地址：https://raw.githubusercontents.com/leafxcy/JavaScript/main/kfx.js\n"
+        ]
+    },
+    "wbtc": {
+        "status": 0,
+        "updateMsg": "2022.01.26 20:00 增加自定义UA",
+        "version": 1.00,
+        "versionMsg": "当前脚本版本过低，请使用直链，不要用ghproxy代理更新脚本，地址：https://raw.githubusercontents.com/leafxcy/JavaScript/main/58tc.js\n",
+        "msg": [
+            "脚本大概跑不了了，任务会显示迷路，等大佬修吧\n自定义UA填到wbtcUA里，不填默认IOS 15\n\n",
+            "此脚本无法运行，请马上删除\n",
+            "此脚本已作废，请下载新脚本，地址：https://raw.githubusercontents.com/leafxcy/JavaScript/main/58tc.js\n"
+        ]
+    },
+    "txs": {
+        "status": 0,
+        "updateMsg": "2022.02.20 13:30 完成脚本",
+        "version": 1.00,
+        "versionMsg": "当前脚本版本过低，请使用直链，不要用ghproxy代理更新脚本，地址：https://raw.githubusercontents.com/leafxcy/JavaScript/main/txs.js\n",
+        "msg": [
+            "运行正常\n",
+            "此脚本无法运行，请马上删除\n",
+            "此脚本已作废，请下载新脚本，地址：https://raw.githubusercontents.com/leafxcy/JavaScript/main/txs.js\n"
+        ]
+    },
+    "msg": "运行正常\n",
+    "errorMsg": "请马上删除，否则原地爆炸\n"
+}
