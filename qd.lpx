@@ -1,12 +1,12 @@
-#!name = embyUnlocked
-#!desc = Emby破解
+#!name = 起点广告
+#!desc = 起点
 #!system = iOS,iPadOS,tvOS,macOS
 #!system_version = 
 #!loon_version = 3.3.2(877)
 #!icon = https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Color/EMBY.png
 
 [Script]
-http-response ^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice requires-body=true, script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/Emby.js, tag=embyUnlocked
+http-request ^https?:\/\/h5\.if\.qidian\.com\/argus\/api\/v1\/video\/adv\/finishWatch requires-body=true, script-path=https://raw.githubusercontent.com/shitou12/Onecs/refs/heads/main/qdgg.js, tag=embyUnlocked
 
 [MITM]
-hostname = mb3admin.com
+hostname = h5.if.qidian.com
