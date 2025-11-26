@@ -6,7 +6,7 @@
 #!icon = https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Color/EMBY.png
 
 [Script]
-http-request ^https?:\/\/h5\.if\.qidian\.com\/argus\/api\/v1\/video\/adv\/finishWatch requires-body=true, script-path=https://raw.githubusercontent.com/shitou12/Onecs/refs/heads/main/qdgg.js, tag=embyUnlocked
+http-request ^https?:\/\/h5\.if\.qidian\.com\/argus\/api\/v1\/video\/adv\/finishWatch requires-body=true, script-path=https://raw.githubusercontent.com/shitou12/Onecs/refs/heads/main/qdgg.js, tag=qidian
 
 [MITM]
 hostname = h5.if.qidian.com
