@@ -1,0 +1,13 @@
+#!name = 起点广告
+#!desc = 起点
+#!system = iOS
+#!system_version = 
+#!loon_version = 3.3.2(877)
+#!icon = https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Color/EMBY.png
+
+[Script]
+http-request ^https?:\/\/h5\.if\.qidian\.com\/argus\/api\/v1\/video\/adv\/finishWatch requires-body=true, script-path=https://raw.githubusercontent.com/shitou12/Onecs/refs/heads/main/qidian.cookie.js, tag=qidian
+http-response ^https?:\/\/h5\.if\.qidian\.com\/argus\/api\/v1\/video\/adv\/mainPage requires-body=true, script-path=https://raw.githubusercontent.com/shitou12/Onecs/refs/heads/main/qidian.taskId.js, tag=qidian
+
+[MITM]
+hostname = h5.if.qidian.com
